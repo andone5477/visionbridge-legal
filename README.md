@@ -13,4 +13,4 @@ translation is provided for reference and Apple App Store submission.
 
 ## Contact
 
-andone5477@gmail.com
+support@wisbridge.app
