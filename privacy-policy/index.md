@@ -5,8 +5,8 @@ title: VisionBridge Privacy Policy
 
 # VisionBridge Privacy Policy
 
-**Last updated**: 2026-05-25
-**Version**: 1.1.0
+**Last updated**: 2026-09-28
+**Version**: 1.2.0
 
 A Traditional Chinese version is the canonical text and is available
 inside the iOS app at Settings → Privacy → "查閱隱私政策". This English
@@ -16,7 +16,8 @@ submission purposes.
 ## Scope
 
 This policy describes how the VisionBridge iOS application
-("the App") collects, processes, and uses user data.
+("the App") collects, processes, and uses user data. Section 13
+covers the public website wisbridge.app and its inquiry form.
 
 ## 1. Data We Collect
 
@@ -97,7 +98,7 @@ applicable, users may:
 
 - **Inspect** their event history within the app's Settings
 - **Correct** their display name
-- **Request a data copy** by contacting andone5477@gmail.com
+- **Request a data copy** by contacting support@wisbridge.app
   (response within 30 days)
 - **Delete** all their data via Settings → Danger Zone →
   "Delete all my data"
@@ -135,7 +136,33 @@ prompt and require renewed consent.
 ## 12. Contact
 
 For any privacy-related questions:
-andone5477@gmail.com
+support@wisbridge.app
+(WisBridge Technology Co., Ltd. / 慧橋科技有限公司, Taiwan tax ID 62047058)
+
+## 13. Website (wisbridge.app) and Inquiry Form
+
+The public website **wisbridge.app** sets no cookies, loads no
+third-party scripts or fonts, and runs no analytics or advertising
+trackers. The interactive demo on the site runs entirely in your
+browser: it does not use the camera, does not track your eyes, and
+sends nothing to any server.
+
+The site has one form, the **institutional inquiry form**
+(`POST /api/inquiry`). If you use it:
+
+| Item | Detail |
+|---|---|
+| Data collected | Organization or household name, contact person, email or phone (required); service size and free-text message (optional) |
+| Purpose | Replying to your inquiry and arranging a pilot or partnership discussion. Not used for marketing. |
+| Storage | Google Cloud Firestore, **asia-east1 (Taiwan)**, written only by our server function; no client can read it |
+| Notification copy | One email to support@wisbridge.app (Gmail; may involve cross-border transfer). Deleted by hand when the inquiry is closed. |
+| Retention | **Up to 180 days** from submission, then deleted automatically by a scheduled Firestore policy (may lag a few days). You may ask us to delete it earlier at any time. |
+| Logs | Our function logs a record ID and an error category only; it does not store your IP address, user agent, or form contents. Google's managed request logs are outside our application. |
+| Your rights | Email support@wisbridge.app to access, copy, correct, restrict, or delete your data; we reply within 30 days. |
+
+Please do not enter medical records, national ID numbers, or other
+sensitive personal data in the form. If you do, we delete that
+record as soon as the inquiry is handled.
 
 ---
 
