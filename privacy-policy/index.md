@@ -5,8 +5,8 @@ title: VisionBridge Privacy Policy
 
 # VisionBridge Privacy Policy
 
-**Last updated**: 2026-09-28
-**Version**: 1.2.0
+**Last updated**: 2026-10-12
+**Version**: 1.3.0
 
 A Traditional Chinese version is the canonical text and is available
 inside the iOS app at Settings → Privacy → "查閱隱私政策". This English
@@ -27,35 +27,42 @@ covers the public website wisbridge.app and its inquiry form.
    Sign in with Apple or email-based sign-in, the corresponding email
    is collected. Anonymous mode does not collect email.
 3. **Device events** — eye-gaze-triggered phrase selections, device
-   state changes, battery level changes, and inactivity alerts
-   (auxiliary reminder events).
+   state changes, and battery level changes.
 4. **Device metadata** — iOS version, model identifier, app version,
    locale.
 5. **Pairing relationships** — the mapping between caregiver and
-   patient devices.
-6. **Anonymous telemetry** (optional) — eye-tracking stability,
-   ARKit tracking quality, gaze standard deviation at the moment an
-   inactivity alert fires. The user can disable telemetry in
+   user devices.
+6. **Anonymous telemetry** (optional) — eye-tracking stability and
+   ARKit tracking quality. The user can disable telemetry in
    Settings.
 7. **Crash reports** (Crashlytics) — call stacks and device
    information when the app crashes, used solely to fix software
    defects.
+8. **Anonymous aggregate statistics** (institutional plans only,
+   double consent) — for an institutional account, and only when
+   **both** the institution and the user have agreed, the system adds
+   up each day's events into **de-identified aggregate statistics**
+   (counts per category and per phrase ID, distribution by time of
+   day, device online rate) for the institution's care management.
+   **These aggregates contain no names, no user identifiers, and no
+   phrase text**, and cannot be traced back to a person. **Off by
+   default**; the user controls it with the "Share anonymous
+   telemetry" switch in Settings (off means not included).
 
 ## 2. Data We Do Not Collect
 
 - Real names, dates of birth, national ID numbers, health insurance
   information
 - Residential addresses, GPS location, IP-derived location
-- Contacts, photos, microphone audio content
+- Contacts, photos, audio recordings
 - Health diagnostic information, medical records, vital signs
 - Cross-app tracking data (Apple ATT is not invoked)
 
 ## 3. Purposes of Use
 
-- Synchronize patient phrase selections to paired caregivers in
+- Synchronize the user's phrase selections to paired caregivers in
   real time
-- App functionality (push notifications, pairing validation,
-  inactivity reminders)
+- App functionality (push notifications, pairing validation)
 - App improvement (when telemetry is enabled)
 - Bug diagnosis (Crashlytics)
 
@@ -69,9 +76,10 @@ covers the public website wisbridge.app and its inquiry form.
 
 | Data type | Retention |
 |---|---|
-| Device event records (phraseSelected, batteryWarning, inactivityAlert) | **Automatically deleted after 30 days** |
+| Device event records (phraseSelected, batteryWarning) | **Automatically deleted after 30 days** |
 | Pairing relationships | Deleted immediately on unpair |
 | Anonymous telemetry | Deleted with event records (30 days) |
+| Anonymous aggregate statistics (institutional plans) | Raw named events are still deleted after 30 days; de-identified aggregates (no user identifier, no phrase text) may be kept long term for the institution's dashboard |
 | Crash reports | 90 days (Firebase Crashlytics default) |
 | Firebase Authentication UID | Deleted on account deletion |
 | Email address (if applicable) | Deleted on account deletion |
@@ -118,14 +126,14 @@ The App does not invoke Apple App Tracking Transparency (ATT).
 | Firebase Authentication | Anonymous / Apple / Email sign-in | Global (de-identified) |
 | Firebase Firestore | Event records, pairing state | asia-east1 (Changhua) |
 | Firebase Cloud Messaging | Cross-device push notifications | Global edge nodes |
-| Firebase Cloud Functions | Pairing code validation, auxiliary reminder dispatch | asia-east1 |
+| Firebase Cloud Functions | Pairing code validation | asia-east1 |
 | Firebase Crashlytics | Crash reports | Global (de-identified) |
 | Apple Push Notification Service (APNs) | iOS push delivery | Global edge nodes |
 
 ## 10. Minors
 
 The App does not actively collect data from users under 13.
-Patient identity is set by the caregiver; we recommend caregivers
+The user's identity is set by the caregiver; we recommend caregivers
 choose an anonymous display name.
 
 ## 11. Policy Changes
@@ -173,8 +181,6 @@ device. It does not replace the judgment of medical professionals.
 
 - The App **does not detect** seizures, arrhythmias, respiratory
   abnormalities, or any vital signs.
-- The "inactivity alert" feature is an auxiliary reminder for
-  caregivers — **it is not a medical alarm**.
 - In any suspected medical emergency, **call 119** (Taiwan
   emergency services) or contact a medical professional
   immediately.
